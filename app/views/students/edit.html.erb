@@ -1,0 +1,37 @@
+<h1 class="text-center">New Student</h1>
+
+<div class="container d-flex justify-content-center">
+  <div class="card" style="width: 400px;">
+    <div class="card-body">
+      <%= form_with(model: @student, local: true) do |form| %>
+        <div class="form-group">
+          <%= form.label :name, 'Name' %>
+          <div class="input-container">
+            <span class="icon">👤</span>
+            <%= form.text_field :name, class: 'form-control', required: true %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <%= form.label :subject, 'Subject' %>
+          <div class="input-container">
+            <span class="icon">📄</span>
+            <%= form.text_field :subject, class: 'form-control' %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <%= form.label :mark, 'Mark' %>
+          <div class="input-container">
+            <span class="icon">🔖</span>
+            <%= form.number_field :mark, class: 'form-control' %>
+          </div>
+        </div>
+        
+        <div class="form-group text-center">
+          <%= form.submit "Add", class: 'add-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

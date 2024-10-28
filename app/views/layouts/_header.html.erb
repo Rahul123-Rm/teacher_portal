@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand shift-right">tailwebs.</a>
+  <div class="ml-auto">
+     <a class="btn mr-2" href="/">Home</a>
+    <form action="/teachers/sign_out" method="post" style="display: inline;">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <button type="submit" class="btn">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<style>
+  .shift-right {
+    margin-left: 10%;
+
+  }
+
+  .shift-left {
+    margin-right: 10%;
+    
+  }
+
+</style>
